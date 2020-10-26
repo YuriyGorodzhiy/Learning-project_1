@@ -1,0 +1,450 @@
+@font-face {
+    src: url(Roboto-Regular.ttf);
+    font-family: 'Roboto';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto';
+}
+
+.top {
+    background: url(/images/top2.jpg) center center / cover;
+    min-height: 560px;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 21px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    display: block;
+}
+
+.logo_1 img {
+    width: 63px;
+    vertical-align: bottom;
+    margin-right: 18px;
+}
+
+.logo_2 img{
+    width: 189px;
+    vertical-align: bottom;
+}
+
+nav>a {
+    font-size: 14.5px;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.center {
+    color: white;
+    text-align: center;
+    margin-top: 136px;
+}
+
+.center h1, .center p {
+    margin: 0;
+}
+
+.center h1 {
+    font-size: 59px;
+    line-height: 69px;
+}
+
+.center p {
+    font-size: 47px;
+}
+
+.center_text {
+    font-weight: bold;
+}
+
+
+/* Кнопка адаптивного меню */
+.menu-button {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.753);
+    position: fixed;
+    right: 0; 
+    top: 0;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+.menu-button div {
+    height: 3px;
+    width: 34px;
+    margin: 4px auto;
+    background-color: black;
+    transition: 0.2s;
+}
+
+.first-stick  {
+    transform: translate(6px, -1px) rotate(45deg) ;
+    transform-origin: left top;
+}
+
+.second-stick  {
+    transform: scale(0);
+}
+
+.third-stick  {
+    transform: translate(6px, 1px) rotate(-45deg);
+    transform-origin: left bottom ;
+}
+/* Конец описания стилей кнопки */
+
+.main_wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.heading-text {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(112, 157, 202);
+    margin: 25px 0;
+}
+
+.about_Moscow{
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 22px;
+}
+
+.block-managers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.managers-item {
+    min-height: 190px;
+    display: flex;
+    min-width: calc(50% - 26px);
+    flex-grow: 1;
+    flex-basis: 400px;
+    background-color: rgb(255, 193, 85);
+    margin-top: 28px;
+}
+
+.indent-item {
+   margin-right: 52px;
+}
+
+.photo-manager {
+    width: 260px;
+    /* height: 190px; */
+    background: center center / cover;
+}
+
+.man {
+    background-image: url(/images/man.jpg);
+}
+
+.woman {
+    background-image: url(/images/woman.jpg);
+}
+
+.info-of-manager {
+    padding: 20px 10px 10px 30px;
+    box-sizing: border-box;
+}
+
+.name_manager {
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 28px;
+    margin: 0 0 5px;
+}
+
+.post_manager {
+    margin: 0 0 30px;
+}
+
+.letter_manager{
+    margin: 0 0 5px;
+}
+
+.email_manager {
+    color: rgb(0, 102, 255);
+}
+
+.contacts-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 65px;
+}
+
+.contacts-form-item {
+    min-width: calc(50% - 26px);
+    flex-grow: 1;
+    flex-basis: 400px;
+    margin-top: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.icon-contact {
+    width: 54px;
+    height: 54px;
+    background: center center / cover;
+}
+
+.adress-agency {
+    background-image: url(/icons_on_pages/placeholder.png);
+}
+
+.email-agency {
+    background-image: url(/icons_on_pages/mail.png);
+}
+
+.telephone-agency {
+    background-image: url(/icons_on_pages/telephone.png);
+}
+
+.text-contact {
+    font-size: 22px;
+    margin: 0 25px;
+}
+
+form p {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.form-item {
+    margin-top: 16px;
+}
+ 
+[type=text],
+[type=email],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid rgb(255, 193, 85);
+    box-sizing: border-box;
+    outline: none;
+    font-size: 23px;
+    -webkit-appearance: none;
+}
+
+textarea{
+    min-height: 160px;
+    resize: vertical;
+}
+
+[type=submit]{
+    width: 100%;
+    background-color:  rgb(6, 32, 51);
+    color: white;
+    font-size: 26px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.yandex-map {
+    position:relative;
+    overflow:hidden;
+    border-top: 5px solid rgb(255, 193, 85);
+}
+
+.footer {
+    background-color: rgb(44, 62, 80);
+    margin: 0 auto;
+}
+
+.footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 62px 10px 10px;
+}
+
+.footer-item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    min-width: 33.333333%;
+}
+
+.myMoscow-item {
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    padding-right: 40px;
+}
+
+.footer-logo_1 img {
+    width: 37px;
+    vertical-align: bottom;
+    margin-right: 11px;
+}
+
+.footer-logo_2 img{
+    width: 111px;
+    vertical-align: bottom;
+    margin: 8px 0;
+}
+
+.footer-item-header {
+    font-size: 22px;
+    line-height: 26px;
+    color: white;
+    margin: 5px 0 28px;
+}
+
+.footer-item-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(195, 195, 195);
+    margin-top: 28px;
+}
+
+.contacts-item {
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contacts img {
+    width: 21px;
+    height: 21px;
+}
+
+.contacts p {
+    margin: 0 17px;
+}
+
+.last_news {
+    margin: 0;
+}
+
+.data-news {
+    color: rgb(113, 182, 213);
+    margin: 0 0 24px;
+}
+
+.adress {
+    background-color: rgb(27, 36, 46);
+    margin: 0 auto;
+}
+
+.adress-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.social-icon img {
+    width: 31px;
+    height: 31px;
+    vertical-align: bottom;
+    margin-left: 7px;
+}
+
+.adress-item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 10px 0;
+}
+
+.adress-item:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+/* Медиа запросы */
+@media (max-width: 888px) {
+    .indent-item {
+        margin-right: 0;
+    }
+
+    .managers-item {
+        min-width: 100%;
+    }
+}
+
+/* Адаптивное меню */
+@media (max-width: 770px) {
+    nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(96, 96, 134, 0.699);
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        padding: 40px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 643px) {
+    .info-of-manager {
+        padding: 10px 10px 10px 10px;
+        box-sizing: border-box;
+    }
+
+    .post_manager {
+        margin: 0 0 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .text-contact {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,614 @@
+@font-face {
+    src: url(Roboto-Regular.ttf);
+    font-family: 'Roboto';
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-line {
+    display: flex;
+    position: relative;
+    left: 0;
+}
+
+.slider-line-item {
+    background: center center / cover;
+    min-height: 560px;
+    min-width: 100%;
+}
+
+.slider-line-item:nth-child(1), .slider-line-item:nth-last-child(1) {
+    background-image: url(images/top.jpg);
+}
+
+.slider-line-item:nth-child(2) {
+    background-image: url(images/ostankino.jpg);
+}
+
+.slider-line-item:nth-child(3) {
+    background-image: url(images/red_square.jpg);
+}
+
+.slider-line-item:nth-child(4) {
+    background-image: url(images/most.jpg);
+}
+
+.slider-line-item:nth-child(5) {
+    background-image: url(images/mgu.jpg);
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 21px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    display: block;
+}
+
+.logo_1 img {
+    width: 63px;
+    vertical-align: bottom;
+    margin-right: 18px;
+}
+
+.logo_2 img{
+    width: 189px;
+    vertical-align: bottom;
+}
+
+nav>a {
+    font-size: 14.5px;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.center {
+    color: white;
+    text-align: center;
+    font-size: 165%;
+    margin-top: 115px;
+}
+
+.center h1, .center p {
+    margin: 0;
+}
+
+.center p:nth-child(3) {
+    margin-bottom: 90px;
+}
+
+.center_button {
+    color:  white;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 18px 39px;
+    background: rgb(112, 157, 202);
+    text-decoration: none;
+}
+
+.slider-button-left {
+    position: absolute;
+    top: 258px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(112, 157, 202);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider-button-right {
+    position: absolute;
+    top: 258px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(112, 157, 202);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    right: 10px;
+}
+
+.slider-button-item1 {
+    width: 8px;
+    height: 8px;
+    border-bottom: 3px solid rgb(255, 174, 0);
+    border-left: 3px solid rgb(255, 174, 0);
+    margin-left: 4px;
+    transform: rotate(45deg)
+}
+
+.slider-button-item2 {
+    width: 8px;
+    height: 8px;
+    border-bottom: 3px solid rgb(255, 174, 0);
+    border-right: 3px solid rgb(255, 174, 0);
+    margin-right: 4px;
+    transform: rotate(-45deg);
+}
+
+/* Кнопка адаптивного меню */
+.menu-button {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.753);
+    position: fixed;
+    right: 0; 
+    top: 0;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+.menu-button div {
+    height: 3px;
+    width: 34px;
+    margin: 4px auto;
+    background-color: black;
+    transition: 0.2s;
+}
+
+.first-stick  {
+    transform: translate(6px, -1px) rotate(45deg) ;
+    transform-origin: left top;
+}
+
+.second-stick  {
+    transform: scale(0);
+}
+
+.third-stick  {
+    transform: translate(6px, 1px) rotate(-45deg);
+    transform-origin: left bottom ;
+}
+/* Конец описания стилей кнопки */
+
+.services h2 {
+    margin: 52px auto 0;
+}
+
+.heading-text {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(112, 157, 202);
+}
+
+.services {
+    padding: 0;
+}
+
+.services p {
+    color: rgb(57, 75, 80);
+    margin: 7px auto 10px;
+}
+
+.paragraph_text {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 77px auto 19px auto;
+}
+
+.blocks-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 10px 55px;
+    min-width: calc(50% - 20px);
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.blocks-item-icon {
+    height: 100px;
+    min-width: 76px;
+    background: center top / 77% no-repeat;
+} 
+
+.map {
+    background-image: url(icons_on_pages/map.png);
+}
+
+.souvenir {
+    background-image: url(icons_on_pages/souvenir.png);
+}
+
+.compass {
+    background-image: url(icons_on_pages/compass.png);
+}
+
+.picture {
+    background-image: url(icons_on_pages/picture.png);
+}
+
+.discussion {
+    background-image: url(icons_on_pages/discussion.png);
+}
+
+.sun {
+    background-image: url(icons_on_pages/sun.png);
+}
+
+.text h3 {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgb(57, 75, 80);
+    margin: 0;
+}
+
+.text p {
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(123, 123, 123);
+    text-align: left;
+    margin: 5px 0 0 0;
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.group_photo, .group_text {
+    min-width: 50%;
+    min-height: 621px;
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.group_photo  {
+    background: url(images/group.jpg) center center / cover;
+    background-color: rgb(72, 184, 57);
+}
+
+.group_text {
+    background-color: rgb(255, 193, 85);
+    padding: 30px 20px 30px 30px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.group_text p {
+    margin: 0 0 21px;
+}
+
+.group_text_1 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.group_text_2 {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.group_text_botton {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 11px 10px;
+    box-sizing: border-box;
+    background-color: rgb(243, 175, 55);
+    border: 2px solid rgb(255, 163, 0);
+    margin-top: 20px;
+}
+
+.moscow-in-photos {
+    padding: 100px 0;
+}
+
+.moscow-in-photos h2 {
+    margin: 0;
+}
+
+.moscow-in-photos hr {
+    width: 219px;
+    height: 2px;
+    background-color: rgb(255, 207, 49);
+    border: none;
+    margin: 22px auto;
+}
+
+.moscow-in-photos p {
+    margin: 0;
+    color: rgb(6, 32, 51);
+    opacity: 0.8;
+}
+
+.photos-moscow {
+    min-width: 25%;
+    height: 284px;
+    flex-grow: 1;
+    flex-basis: 200px;
+    background: center center / cover;
+}
+
+.photo-moscow-1 {
+    background-image: url(images/1.jpg);
+}
+
+.photo-moscow-2 {
+    background-image: url(images/2.jpg);
+}
+
+.photo-moscow-3 {
+    background-image: url(images/3.jpg);
+}
+
+.photo-moscow-4 {
+    background-image: url(images/4.jpg);
+}
+
+.photo-moscow-5 {
+    background-image: url(images/5.jpg);
+}
+
+.photo-moscow-6 {
+    background-image: url(images/6.jpg);
+}
+
+.photo-moscow-7 {
+    background-image: url(images/7.jpg);
+}
+
+.photo-moscow-8 {
+    background-image: url(images/8.jpg);
+}
+
+.reviews {
+    padding: 0;
+}
+
+.reviews h2 {
+    margin: 65px 0 0;
+}
+
+.reviews hr {
+    width: 232px;
+    height: 2px;
+    background-color: rgb(255, 207, 49);
+    border: none;
+    margin: 15px auto 50px;
+}
+
+.block-reviews {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-reviews-item {
+    align-items: flex-start;
+    min-width: 50%;
+    flex-grow: 1;
+    flex-basis: 400px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+}
+
+.review-author {
+    display: flex;
+    margin-top: 30px;
+}
+
+.photo-author {
+    width: 44px;
+    height: 44px;
+    background: center center / cover;
+}
+
+.photo_1 {
+    background-image: url(images/test2.jpg);
+}
+
+.photo_2 {
+    background-image: url(images/test1.jpg);
+}
+
+.name-author {
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(77, 78, 80);
+    margin-left: 10px;
+}
+
+.footer {
+    background-color: rgb(44, 62, 80);
+    margin: 0 auto;
+}
+
+.footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 62px 10px 10px;
+}
+
+.footer-item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    min-width: 33.333333%;
+}
+
+.myMoscow-item {
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    padding-right: 40px;
+}
+
+.footer-logo_1 img {
+    width: 37px;
+    vertical-align: bottom;
+    margin-right: 11px;
+}
+
+.footer-logo_2 img{
+    width: 111px;
+    vertical-align: bottom;
+    margin: 8px 0;
+}
+
+.footer-item-header {
+    font-size: 22px;
+    line-height: 26px;
+    color: white;
+    margin: 5px 0 28px;
+}
+
+.footer-item-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(195, 195, 195);
+    margin-top: 28px;
+}
+
+.contacts-item {
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contacts img {
+    width: 21px;
+    height: 21px;
+}
+
+.contacts p {
+    margin: 0 17px;
+}
+
+.last_news {
+    margin: 0;
+}
+
+.data-news {
+    color: rgb(113, 182, 213);
+    margin: 0 0 24px;
+}
+
+.adress {
+    background-color: rgb(27, 36, 46);
+    margin: 0 auto;
+}
+
+.adress-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.social-icon img {
+    width: 31px;
+    height: 31px;
+    vertical-align: bottom;
+    margin-left: 7px;
+}
+
+.adress-item {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 10px 0;
+}
+
+/* .adress-item:nth-child(2) {
+    text-align: center;
+} */
+
+.adress-item:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+/* Адаптивное меню (медиа запросы) */
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(96, 96, 134, 0.699);
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        padding: 40px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+}
